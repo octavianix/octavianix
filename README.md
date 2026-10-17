@@ -4,13 +4,15 @@
 
 <img src="assets/img/suyash.png" align="right" width="190" alt="Photo of Suyash"/>
 
-Hi, I'm Suyash. I'm doing my PhD at the National Centre for Cell Science in Pune, in the DDOmics Lab, where I work on microbes and what they do inside us.
+Hi, I'm Suyash. I'm a bioinformatician and a Ph.D. scholar in the DDOmics Lab at the National Centre for Cell Science, Pune, where I build computational tools to read and make sense of microbiome sequencing data.
 
-I'm a microbiologist first. I got into coding because the sequencing data kept piling up faster than I could deal with it in Excel, and at some point writing a script became quicker than doing things by hand. Now I spend about as much time in a terminal as I do at the bench, and I enjoy both. When I'm doing neither, I'm usually watching Formula 1, which is where the start lights up there come from.
+I started out with a B.Sc. in Biotechnology in Nashik, then did my M.Sc. at the Bioinformatics Centre, Savitribai Phule Pune University, which is where I moved fully into bioinformatics. I joined NCCS in August 2026 on a CSIR-UGC NET fellowship.
 
-Most of what I build is for the people in my own lab, so I care a lot about whether a tool is easy to install and whether its output can be trusted without me standing next to it.
+When I'm away from the screen, I'm usually watching Formula 1, which is where the start lights up there come from. Senna once said you go for the limit, reach it, and then find you can go a little bit further. It's my favourite quote.
 
 <br clear="right"/>
+
+<img src="assets/circuit.svg" width="100%" alt="One lap so far: an animated circuit where a car passes five milestones. 2021 B.Sc. Biotechnology, Nashik. 2024 GATE-B, AIR 31. 2024 M.Sc. Bioinformatics, SPPU. 2025 CSIR-NET JRF, AIR 105. 2026 Ph.D., DDOmics Lab, NCCS."/>
 
 <br/>
 
@@ -48,6 +50,6 @@ I mostly write R and Python, with a fair amount of Bash holding things together.
 
 <img src="assets/titles/hello.svg" height="62" alt="Sector 3: say hello"/>
 
-If you work on microbiomes, diet and the gut, or your lab has a tool it keeps wishing existed, I'd love to hear about it. You can reach me at **Suyashjadhav710@gmail.com**.
+If you work on microbiomes, diet and the gut, or your lab has a tool it keeps wishing existed, I'd love to hear about it. You can reach me at **Suyashjadhav710@gmail.com**, or find me on [LinkedIn](https://www.linkedin.com/in/suyash-jadhav-bioinformatician/), [ORCID](https://orcid.org/0009-0000-1043-7044) and [X](https://x.com/SuyashJ0710).
 
 <img src="assets/footer.svg" width="100%" alt="Chequered flag: thanks for reading"/>
