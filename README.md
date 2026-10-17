@@ -18,7 +18,7 @@ When I'm away from the screen, I'm usually watching Formula 1, which is where th
 
 <img src="assets/titles/worked.svg" height="62" alt="Sector 1: Things I've worked on"/>
 
-**Gut enterotypes in India**
+<img src="assets/card-enterotypes.svg" width="100%" alt="01. Gut enterotypes in India: dissertation, reanalysis in progress. 3,020 people, 17 communities, 5 enterotypes, Prevotella-led."/>
 
 For my dissertation I worked with gut microbiome data from 3,020 people belonging to 17 communities across India, both tribal and non-tribal, along with a food questionnaire that most of them filled in. The question was easy to ask: do Indian guts fall into a few recurring community types, and can you tell which one a person has from what they eat?
 
@@ -26,13 +26,13 @@ For my dissertation I worked with gut microbiome data from 3,020 people belongin
 
 When I went back to the data recently, I found that one of those five groups was mostly samples from low-depth sequencing runs, so it was a batch effect rather than biology. I'm now redoing the analysis with a cleaner pipeline that accounts for sequencing runs, picks the number of enterotypes by a rule fixed in advance, and tests the questionnaire on states it has never seen.
 
-**CRC multi-omics biomarker discovery**
+<img src="assets/card-crc.svg" width="100%" alt="02. CRC multi-omics biomarker discovery: v2.0.0, first full run. 557 patients, TCGA, ENCODE and 1000 Genomes, 15-gene shortlist."/>
 
 I wanted to know which genes separate normal colon tissue from early colorectal cancer if you don't rely on differential expression alone. So I took TCGA RNA-seq data from 557 patients and layered chromatin accessibility from ENCODE, survival models, a Bayesian network and South Asian vs European allele frequencies from 1000 Genomes on top. Then I ranked genes by how much of that evidence agreed.
 
 It gave me a shortlist of 15 genes. It also showed that most of what looked like a difference between early and late stage tumours was really a difference in the immune and stromal cells in the samples, and none of the 15 held up for survival once I corrected for multiple testing. Not what I was hoping for, but I'd rather know.
 
-**Our lab's website**
+<img src="assets/card-website.svg" width="100%" alt="03. Our lab's website, built for the DDOmics Lab: 24 people, 85 publications, 28 pages, no-code editing."/>
 
 I built the DDOmics Lab website so that nobody would need me to keep it updated. People, publications, news and everything else live in simple table files that anyone in the lab can edit straight on GitHub, and every change gets checked automatically before it goes up.
 
@@ -44,12 +44,16 @@ Most of what I'm working on right now is still unpublished and lives in private 
 
 <img src="assets/contrib.svg" width="100%" alt="Animated contribution graph for the last year"/>
 
-I mostly write R and Python, with a fair amount of Bash holding things together. QIIME2 and phyloseq cover the microbiome side, Bioconductor the rest of the omics, and when something needs a proper interface I use React and TypeScript.
+I mostly write R and Python, with a fair amount of Bash holding things together.
+
+<img src="assets/tyres.svg" width="100%" alt="Tyre allocation, the tools I use most: R, Python, Bash, QIIME2, phyloseq, Bioconductor, React, TypeScript."/>
 
 <br/>
 
 <img src="assets/titles/hello.svg" height="62" alt="Sector 3: say hello"/>
 
-If you work on microbiomes, diet and the gut, or your lab has a tool it keeps wishing existed, I'd love to hear about it. You can reach me at **Suyashjadhav710@gmail.com**, or find me on [LinkedIn](https://www.linkedin.com/in/suyash-jadhav-bioinformatician/), [ORCID](https://orcid.org/0009-0000-1043-7044) and [X](https://x.com/SuyashJ0710).
+<img src="assets/radio.svg" width="100%" alt="Team radio from Suyash: If you work on microbiomes, diet and the gut, or your lab has a tool it keeps wishing existed, come on the radio. I'd love to hear about it."/>
+
+Email me at **Suyashjadhav710@gmail.com**, or find me on [LinkedIn](https://www.linkedin.com/in/suyash-jadhav-bioinformatician/), [ORCID](https://orcid.org/0009-0000-1043-7044) and [X](https://x.com/SuyashJ0710).
 
 <img src="assets/footer.svg" width="100%" alt="Chequered flag: thanks for reading"/>
