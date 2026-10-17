@@ -4,7 +4,7 @@
 
 <br/>
 
-<img src="assets/driver.svg" width="100%" alt="Driver card: JAD, Suyash Jadhav, India. DDOmics Lab, NCCS Pune. Bioinformatician and Ph.D. scholar."/>
+<img src="assets/driver.svg" width="100%" alt="Driver card: JAD, number 07, Suyash Jadhav, India. DDOmics Lab, NCCS Pune. Bioinformatician and Ph.D. scholar."/>
 
 Hi, I'm Suyash. I'm a bioinformatician and a Ph.D. scholar in the DDOmics Lab at the National Centre for Cell Science, Pune, where I build computational tools to read and make sense of microbiome sequencing data.
 
@@ -48,7 +48,7 @@ Most of what I'm working on right now is still unpublished and lives in private 
 
 <img src="assets/next-race.svg" width="100%" alt="Next Formula 1 race, updated daily"/>
 
-<img src="assets/weekend.svg" width="100%" alt="Free practice (what I am learning): comparative genomics of bacterial strains; metabolic modelling of microbial communities; LeetCode, in Python. Season goals: find stable enterotypes in the Indian gut data; validate the diet questionnaire on unseen states; test whether enterosignatures exist in Indian guts."/>
+<img src="assets/weekend.svg" width="100%" alt="Free practice: new methods in testing, long runs on current projects, setup work with details after qualifying. Season goals: results I would defend in parc fermé, publish when it is ready and not before, leave tools the next person can use."/>
 
 I mostly write R and Python, with a fair amount of Bash holding things together.
 
