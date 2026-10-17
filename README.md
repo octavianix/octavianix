@@ -14,7 +14,7 @@ Most of what I build is for the people in my own lab, so I care a lot about whet
 
 <br/>
 
-<img src="assets/titles/worked.svg" height="62" alt="Sector 1: things I've worked on"/>
+<img src="assets/titles/worked.svg" height="62" alt="Sector 1: Things I've worked on"/>
 
 **Gut enterotypes in India**
 
