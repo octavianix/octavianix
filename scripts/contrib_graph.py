@@ -29,6 +29,21 @@ LEVELS = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2,
 CELL, GAP = 14, 4
 PITCH = CELL + GAP
 LEFT, TOP = 40, 78
+LAP = 12  # seconds between laps of the little car
+
+# Side-view F1 car, about 245 x 64 units, drawn facing right.
+CAR = (
+    '<path fill="#1b1b24" d="M0 10h30v6H0z"/><path fill="#e10600" d="M4 16h6v24H4z"/> <path fill="#e1'
+    '0600" d="M8 47 L11 36 L38 33 L72 26 L94 23 L99 14 L107 13 L111 25 L126 25 L138 30 L194 36 L222 4'
+    '2 L232 48 L8 51 Z"/> <path fill="#fff" d="M44 38 L194 40.5 L194 43 L44 41 Z"/> <circle cx="121" '
+    'cy="22" r="5.5" fill="#ffd400"/> <path fill="none" stroke="#1b1b24" stroke-width="3" stroke-line'
+    'cap="round" d="M110 26 Q120 12 137 27"/> <path fill="#1b1b24" d="M18 49 H216 V53 H18 Z"/> <path '
+    'fill="#1b1b24" d="M206 50 H244 V55 H206 Z"/><path fill="#e10600" d="M239 42 h5 v13 h-5z"/> <g tr'
+    'ansform="translate(46 49)"><g class="spin"><circle r="15" fill="#111"/><circle r="7.5" fill="#9a'
+    'a0a6"/><path d="M-7.5 0H7.5M0-7.5V7.5" stroke="#111" stroke-width="2.4"/></g></g> <g transform="'
+    'translate(186 50)"><g class="spin"><circle r="13" fill="#111"/><circle r="6.5" fill="#9aa0a6"/><'
+    'path d="M-6.5 0H6.5M0-6.5V6.5" stroke="#111" stroke-width="2.2"/></g></g>'
+)
 
 
 def fetch(login, token):
@@ -81,7 +96,8 @@ def render(days):
     start = days[0][0] - dt.timedelta(days=(days[0][0].weekday() + 1) % 7)  # weeks start Sunday
     n_weeks = (days[-1][0] - start).days // 7 + 1
     width = LEFT + n_weeks * PITCH + 20
-    height = TOP + 7 * PITCH + 46
+    lane_y = TOP + 7 * PITCH + 6
+    height = TOP + 7 * PITCH + 70
 
     cells, months, last_month = [], [], None
     for d, v, lvl in days:
@@ -91,7 +107,7 @@ def render(days):
         delay = week * 0.035 + dow * 0.012
         pulse = (f";animation:pop .5s cubic-bezier(.3,1.6,.5,1) {delay:.2f}s both,"
                  f"glow 6s ease-in-out {2.4 + week * 0.06:.2f}s infinite") if lvl else ""
-        cells.append(f'<rect class="l{lvl}" x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="3" '
+        cells.append(f'<rect class="cell l{lvl}" x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="3" '
                      f'style="animation-delay:{delay:.2f}s{pulse}"><title>{v} on {d:%d %b %Y}</title></rect>')
         if dow == 0 and d.month != last_month:
             last_month = d.month
@@ -112,19 +128,25 @@ def render(days):
 text{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;fill:#59636e}}
 .h{{font-size:22px;font-weight:700;fill:#1f2328}} .s{{font-size:13px}} .m{{font-size:11px}}
 .l0{{fill:#ebedf0}} .l1{{fill:#9be9a8}} .l2{{fill:#40c463}} .l3{{fill:#30a14e}} .l4{{fill:#216e39}}
-rect{{transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}}
-.lg{{animation:none}}
+.cell{{transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}}
+.spin{{transform-box:fill-box;transform-origin:center;animation:sp .3s linear infinite}}
+.car{{animation:lap {LAP}s linear 2.6s infinite both}}
+.lane{{stroke:#d1d9e0;stroke-dasharray:6 6}}
+@keyframes sp{{to{{transform:rotate(360deg)}}}}
+@keyframes lap{{0%{{transform:translate({LEFT - 70}px,{lane_y}px)}}35%,100%{{transform:translate({width + 10}px,{lane_y}px)}}}}
 @keyframes pop{{from{{opacity:0;transform:scale(.2)}}to{{opacity:1;transform:scale(1)}}}}
 @keyframes glow{{0%,88%,100%{{filter:none}}94%{{filter:brightness(1.35) saturate(1.2)}}}}
 @media (prefers-color-scheme:dark){{
-text{{fill:#8b949e}} .h{{fill:#e6edf3}}
+text{{fill:#8b949e}} .h{{fill:#e6edf3}} .lane{{stroke:#30363d}}
 .l0{{fill:#161b22}} .l1{{fill:#0e4429}} .l2{{fill:#006d32}} .l3{{fill:#26a641}} .l4{{fill:#39d353}}}}
-@media (prefers-reduced-motion:reduce){{rect{{animation:none!important}}}}
+@media (prefers-reduced-motion:reduce){{.cell,.car,.spin{{animation:none!important}}.car{{display:none}}}}
 </style>
 <text class="h" x="{LEFT}" y="30">{total:,} contributions in the last year</text>
 <text class="s" x="{LEFT}" y="52">{stats}</text>
 {"".join(months)}
 {"".join(cells)}
+<line class="lane" x1="{LEFT}" x2="{LEFT + n_weeks * PITCH - GAP}" y1="{lane_y + 18}" y2="{lane_y + 18}"/>
+<g class="car"><g transform="scale(0.27)">{CAR}</g></g>
 <text class="m" x="{legend_x - 8}" y="{height - 19}" text-anchor="end">Less</text>{legend}
 <text class="m" x="{legend_x + 5 * PITCH + 2}" y="{height - 19}">More</text>
 </svg>'''

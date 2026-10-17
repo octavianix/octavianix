@@ -1,4 +1,4 @@
-<img src="assets/banner.svg" width="100%" alt="Suyash Jadhav"/>
+<img src="assets/banner.svg" width="100%" alt="Suyash Jadhav, with F1 start lights and a car driving off along a track"/>
 
 <br/>
 
@@ -6,7 +6,7 @@
 
 Hi, I'm Suyash. I'm doing my PhD at the National Centre for Cell Science in Pune, in the DDOmics Lab, where I work on microbes and what they do inside us.
 
-I'm a microbiologist first. I got into coding because the sequencing data kept piling up faster than I could deal with it in Excel, and at some point writing a script became quicker than doing things by hand. Now I spend about as much time in a terminal as I do at the bench, and I enjoy both.
+I'm a microbiologist first. I got into coding because the sequencing data kept piling up faster than I could deal with it in Excel, and at some point writing a script became quicker than doing things by hand. Now I spend about as much time in a terminal as I do at the bench, and I enjoy both. When I'm doing neither, I'm usually watching Formula 1, which is where the start lights up there come from.
 
 Most of what I build is for the people in my own lab, so I care a lot about whether a tool is easy to install and whether its output can be trusted without me standing next to it.
 
@@ -14,7 +14,7 @@ Most of what I build is for the people in my own lab, so I care a lot about whet
 
 <br/>
 
-<img src="assets/titles/worked.svg" height="62" alt="Things I've worked on"/>
+<img src="assets/titles/worked.svg" height="62" alt="Sector 1: things I've worked on"/>
 
 **Gut enterotypes in India**
 
@@ -36,9 +36,9 @@ I built the DDOmics Lab website so that nobody would need me to keep it updated.
 
 <br/>
 
-<img src="assets/titles/lately.svg" height="62" alt="Lately"/>
+<img src="assets/titles/lately.svg" height="62" alt="Sector 2: lately"/>
 
-Most of what I'm working on right now is still unpublished and lives in private repos, so this graph is the only bit of it you can see for now. It redraws itself every day.
+Most of what I'm working on right now is still unpublished and lives in private repos, so this graph is the only bit of it you can see for now. It redraws itself every day, and the car does a lap underneath it.
 
 <img src="assets/contrib.svg" width="100%" alt="Animated contribution graph for the last year"/>
 
@@ -46,8 +46,8 @@ I mostly write R and Python, with a fair amount of Bash holding things together.
 
 <br/>
 
-<img src="assets/titles/hello.svg" height="62" alt="Say hello"/>
+<img src="assets/titles/hello.svg" height="62" alt="Sector 3: say hello"/>
 
 If you work on microbiomes, diet and the gut, or your lab has a tool it keeps wishing existed, I'd love to hear about it. You can reach me at **Suyashjadhav710@gmail.com**.
 
-<img src="assets/footer.svg" width="100%" alt="Thanks for reading"/>
+<img src="assets/footer.svg" width="100%" alt="Chequered flag: thanks for reading"/>
