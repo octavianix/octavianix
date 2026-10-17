@@ -1,8 +1,10 @@
 <img src="assets/banner.svg" width="100%" alt="Suyash Jadhav, with F1 start lights and a car driving off along a track"/>
 
+<img src="assets/ticker.svg" width="100%" alt="Race control: Ph.D. lap 1 underway at the DDOmics Lab, NCCS Pune, since August 2026. Enterotype ET1 under investigation, batch effect confirmed. DRS enabled, new enterotyping pipeline. CRC multi-omics v2.0.0 classified. Survival signal for the 15-gene shortlist noted, no further action."/>
+
 <br/>
 
-<img src="assets/img/suyash.png" align="right" width="190" alt="Photo of Suyash"/>
+<img src="assets/driver.svg" width="100%" alt="Driver card: JAD, Suyash Jadhav, India. DDOmics Lab, NCCS Pune. Bioinformatician and Ph.D. scholar."/>
 
 Hi, I'm Suyash. I'm a bioinformatician and a Ph.D. scholar in the DDOmics Lab at the National Centre for Cell Science, Pune, where I build computational tools to read and make sense of microbiome sequencing data.
 
@@ -10,7 +12,7 @@ I started out with a B.Sc. in Biotechnology in Nashik, then did my M.Sc. at the 
 
 When I'm away from the screen, I'm usually watching Formula 1, which is where the start lights up there come from. 
 
-<br clear="right"/>
+<img src="assets/pitstop.svg" width="100%" alt="Pit stop, 2024: switched from Biotechnology (B.Sc.) to Bioinformatics (M.Sc. onwards)."/>
 
 <img src="assets/circuit.svg" width="100%" alt="One lap so far: a live-timing style circuit. A car laps the track, braking for corners, while mini-sectors light up, a speed and throttle/brake trace follows it, and a timing tower highlights five milestones: 2021 B.Sc. Biotechnology, Nashik; 2024 GATE-B, AIR 31; 2024 M.Sc. Bioinformatics, SPPU; 2025 CSIR-NET JRF, AIR 105; 2026 Ph.D., DDOmics Lab, NCCS."/>
 
@@ -40,13 +42,19 @@ I built the DDOmics Lab website so that nobody would need me to keep it updated.
 
 <img src="assets/titles/lately.svg" height="62" alt="Sector 2: lately"/>
 
-Most of what I'm working on right now is still unpublished and lives in private repos, so this graph is the only bit of it you can see for now. It redraws itself every day, and the car does a lap underneath it.
+Most of what I'm working on right now is still unpublished and lives in private repos, so this graph is the only bit of it you can see for now. It redraws itself every day, the car does a lap underneath it, and my busiest day gets the purple fastest-lap tag.
 
-<img src="assets/contrib.svg" width="100%" alt="Animated contribution graph for the last year"/>
+<img src="assets/contrib.svg" width="100%" alt="Animated contribution graph for the last year, with the busiest day marked as the fastest lap"/>
+
+<img src="assets/next-race.svg" width="100%" alt="Next Formula 1 race, updated daily"/>
+
+<img src="assets/weekend.svg" width="100%" alt="Free practice, what I am learning: comparative genomics of bacterial strains; metabolic modelling of microbial communities; LeetCode, in Python. Season goals: find stable enterotypes in the Indian gut data; validate the diet questionnaire on unseen states; test whether enterosignatures exist in Indian guts."/>
 
 I mostly write R and Python, with a fair amount of Bash holding things together.
 
 <img src="assets/tyres.svg" width="100%" alt="Tyre allocation, the tools I use most: R, Python, Bash, QIIME2, phyloseq, Bioconductor, React, TypeScript."/>
+
+<img src="assets/standings.svg" width="100%" alt="Constructors' standings by size of code in my own repos, October 2026: 1. Python 41.7%, 2. TypeScript 31.8%, 3. R 11.3%, 4. JavaScript 8.5%, 5. Shell 3.1%, 6. CSS 2.1%."/>
 
 <br/>
 

@@ -28,7 +28,7 @@ LEVELS = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2,
 
 CELL, GAP = 14, 4
 PITCH = CELL + GAP
-LEFT, TOP = 40, 78
+LEFT, TOP = 40, 96
 LAP = 12  # seconds between laps of the little car
 
 # Side-view F1 car, about 245 x 64 units, drawn facing right.
@@ -100,10 +100,13 @@ def render(days):
     height = TOP + 7 * PITCH + 70
 
     cells, months, last_month = [], [], None
+    best_xy = None
     for d, v, lvl in days:
         week = (d - start).days // 7
         dow = (d.weekday() + 1) % 7
         x, y = LEFT + week * PITCH, TOP + dow * PITCH
+        if (d, v) == (best[0], best[1]):
+            best_xy = (x, y)
         delay = week * 0.035 + dow * 0.012
         pulse = (f";animation:pop .5s cubic-bezier(.3,1.6,.5,1) {delay:.2f}s both,"
                  f"glow 6s ease-in-out {2.4 + week * 0.06:.2f}s infinite") if lvl else ""
@@ -119,8 +122,22 @@ def render(days):
     legend_x = width - 56 - 5 * PITCH
     legend = "".join(f'<rect class="l{i} lg" x="{legend_x + i * PITCH}" y="{height - 30}" width="{CELL}" '
                      f'height="{CELL}" rx="3"/>' for i in range(5))
-    stats = (f"{active} active days  ·  longest streak {longest} days  ·  current streak {current} "
-             f"days  ·  busiest day {best[1]} on {best[0]:%d %b}")
+    stats = f"{active} active days  ·  longest streak {longest} days  ·  current streak {current} days"
+
+    # Fastest lap: the busiest day, outlined in purple with a tag above the grid.
+    fastest = ""
+    if best_xy and best[1]:
+        bx, by = best_xy
+        tag_x = min(max(bx - 60, LEFT), width - 190)
+        fastest = (f'<rect class="fl" x="{bx - 2}" y="{by - 2}" width="{CELL + 4}" height="{CELL + 4}" rx="4"/>'
+                   f'<line class="fll" x1="{bx + CELL / 2}" x2="{bx + CELL / 2}" y1="{TOP - 20}" y2="{by - 2}"/>'
+                   f'<rect x="{tag_x}" y="{TOP - 40}" width="170" height="20" rx="4" fill="#a855f7"/>'
+                   f'<text class="flt" x="{tag_x + 10}" y="{TOP - 26}">FASTEST LAP · {best[1]} on {best[0]:%d %b}</text>')
+
+    # Flag board: green while the streak is alive, virtual safety car when it is not.
+    flag_txt, flag_col = ("GREEN FLAG", "#22c55e") if current else ("VSC DEPLOYED", "#eab308")
+    board = (f'<rect class="fb" x="{width - 170}" y="14" width="150" height="26" rx="5" fill="{flag_col}"/>'
+             f'<text class="fbt" x="{width - 95}" y="31" text-anchor="middle">{flag_txt}</text>')
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-labelledby="t">
 <title id="t">{total:,} contributions in the last year. {stats}.</title>
@@ -132,6 +149,13 @@ text{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sa
 .spin{{transform-box:fill-box;transform-origin:center;animation:sp .3s linear infinite}}
 .car{{animation:lap {LAP}s linear 2.6s infinite both}}
 .lane{{stroke:#d1d9e0;stroke-dasharray:6 6}}
+.fl{{fill:none;stroke:#a855f7;stroke-width:2.5;animation:flp 1.6s ease-in-out infinite alternate}}
+.fll{{stroke:#a855f7;stroke-width:1.5;stroke-dasharray:2 3}}
+.flt{{font-size:10.5px;font-weight:700;fill:#fff;letter-spacing:.6px}}
+.fbt{{font-size:11px;font-weight:800;fill:#111;letter-spacing:1.2px}}
+.fb{{animation:fbp 2s ease-in-out infinite alternate}}
+@keyframes flp{{from{{stroke-opacity:1}}to{{stroke-opacity:.25}}}}
+@keyframes fbp{{from{{opacity:1}}to{{opacity:.75}}}}
 @keyframes sp{{to{{transform:rotate(360deg)}}}}
 @keyframes lap{{0%{{transform:translate({LEFT - 70}px,{lane_y}px)}}35%,100%{{transform:translate({width + 10}px,{lane_y}px)}}}}
 @keyframes pop{{from{{opacity:0;transform:scale(.2)}}to{{opacity:1;transform:scale(1)}}}}
@@ -145,6 +169,8 @@ text{{fill:#8b949e}} .h{{fill:#e6edf3}} .lane{{stroke:#30363d}}
 <text class="s" x="{LEFT}" y="52">{stats}</text>
 {"".join(months)}
 {"".join(cells)}
+{fastest}
+{board}
 <line class="lane" x1="{LEFT}" x2="{LEFT + n_weeks * PITCH - GAP}" y1="{lane_y + 18}" y2="{lane_y + 18}"/>
 <g class="car"><g transform="scale(0.27)">{CAR}</g></g>
 <text class="m" x="{legend_x - 8}" y="{height - 19}" text-anchor="end">Less</text>{legend}
