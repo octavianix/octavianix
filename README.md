@@ -10,11 +10,11 @@ Hi, I'm Suyash. I'm a bioinformatician and a Ph.D. scholar in the DDOmics Lab at
 
 I started out with a B.Sc. in Biotechnology in Nashik, then did my M.Sc. at the Bioinformatics Centre, Savitribai Phule Pune University, which is where I moved fully into bioinformatics. I joined NCCS in August 2026 on a CSIR-UGC NET fellowship.
 
-When I'm away from the screen, I'm usually watching Formula 1, which is where the start lights up there come from. 
+When I'm away from the screen, I'm usually watching Formula 1, which is where the start lights up there come from.
 
 <img src="assets/pitstop.svg" width="100%" alt="Pit stop, 2024: switched from Biotechnology (B.Sc.) to Bioinformatics (M.Sc. onwards)."/>
 
-<img src="assets/circuit.svg" width="100%" alt="One lap so far: a live-timing style circuit. A car laps the track, braking for corners, while mini-sectors light up, a speed and throttle/brake trace follows it, and a timing tower highlights five milestones: 2021 B.Sc. Biotechnology, Nashik; 2024 GATE-B, AIR 31; 2024 M.Sc. Bioinformatics, SPPU; 2025 CSIR-NET JRF, AIR 105; 2026 Ph.D., DDOmics Lab, NCCS."/>
+<img src="assets/circuit.svg" width="100%" alt="One lap so far: a live-timing-style circuit. A car laps the track, braking for corners, while mini-sectors light up, a speed and throttle/brake trace follows it, and a timing tower highlights five milestones: 2021 B.Sc. Biotechnology, Nashik; 2024 GATE-B, AIR 31; 2024 M.Sc. Bioinformatics, SPPU; 2025 CSIR-NET JRF, AIR 105; 2026 Ph.D., DDOmics Lab, NCCS."/>
 
 <br/>
 
@@ -30,9 +30,9 @@ When I went back to the data recently, I found that one of those five groups was
 
 <img src="assets/card-crc.svg" width="100%" alt="02. CRC multi-omics biomarker discovery: v2.0.0, first full run. 557 patients, TCGA, ENCODE and 1000 Genomes, 15-gene shortlist."/>
 
-I wanted to know which genes separate normal colon tissue from early colorectal cancer if you don't rely on differential expression alone. So I took TCGA RNA-seq data from 557 patients and layered chromatin accessibility from ENCODE, survival models, a Bayesian network and South Asian vs European allele frequencies from 1000 Genomes on top. Then I ranked genes by how much of that evidence agreed.
+I wanted to know which genes separate normal colon tissue from early colorectal cancer if you don't rely on differential expression alone. So I took TCGA RNA-seq data from 557 patients and layered chromatin accessibility from ENCODE, survival models, a Bayesian network and South Asian vs. European allele frequencies from 1000 Genomes on top. Then I ranked genes by how much of that evidence agreed.
 
-It gave me a shortlist of 15 genes. It also showed that most of what looked like a difference between early and late stage tumours was really a difference in the immune and stromal cells in the samples, and none of the 15 held up for survival once I corrected for multiple testing. Not what I was hoping for, but I'd rather know.
+It gave me a shortlist of 15 genes. It also showed that most of what looked like a difference between early- and late-stage tumours was really a difference in the immune and stromal cells in the samples, and none of the 15 held up for survival once I corrected for multiple testing. Not what I was hoping for, but I'd rather know.
 
 <img src="assets/card-website.svg" width="100%" alt="03. Our lab's website, built for the DDOmics Lab: 24 people, 85 publications, 28 pages, no-code editing."/>
 
@@ -40,7 +40,7 @@ I built the DDOmics Lab website so that nobody would need me to keep it updated.
 
 <br/>
 
-<img src="assets/titles/lately.svg" height="62" alt="Sector 2: lately"/>
+<img src="assets/titles/lately.svg" height="62" alt="Sector 2: Lately"/>
 
 Most of what I'm working on right now is still unpublished and lives in private repos, so this graph is the only bit of it you can see for now. It redraws itself every day, the car does a lap underneath it, and my busiest day gets the purple fastest-lap tag.
 
@@ -48,20 +48,20 @@ Most of what I'm working on right now is still unpublished and lives in private 
 
 <img src="assets/next-race.svg" width="100%" alt="Next Formula 1 race, updated daily"/>
 
-<img src="assets/weekend.svg" width="100%" alt="Free practice, what I am learning: comparative genomics of bacterial strains; metabolic modelling of microbial communities; LeetCode, in Python. Season goals: find stable enterotypes in the Indian gut data; validate the diet questionnaire on unseen states; test whether enterosignatures exist in Indian guts."/>
+<img src="assets/weekend.svg" width="100%" alt="Free practice (what I am learning): comparative genomics of bacterial strains; metabolic modelling of microbial communities; LeetCode, in Python. Season goals: find stable enterotypes in the Indian gut data; validate the diet questionnaire on unseen states; test whether enterosignatures exist in Indian guts."/>
 
 I mostly write R and Python, with a fair amount of Bash holding things together.
 
-<img src="assets/tyres.svg" width="100%" alt="Tyre allocation, the tools I use most: R, Python, Bash, QIIME2, phyloseq, Bioconductor, React, TypeScript."/>
+<img src="assets/tyres.svg" width="100%" alt="Tyre allocation. The compounds I reach for most: R, Python, Bash, QIIME2, phyloseq, Bioconductor, React, TypeScript."/>
 
 <img src="assets/standings.svg" width="100%" alt="Constructors' standings by size of code in my own repos, October 2026: 1. Python 41.7%, 2. TypeScript 31.8%, 3. R 11.3%, 4. JavaScript 8.5%, 5. Shell 3.1%, 6. CSS 2.1%."/>
 
 <br/>
 
-<img src="assets/titles/hello.svg" height="62" alt="Sector 3: say hello"/>
+<img src="assets/titles/hello.svg" height="62" alt="Sector 3: Say hello"/>
 
 <img src="assets/radio.svg" width="100%" alt="Team radio from Suyash: If you work on microbiomes, diet and the gut, or your lab has a tool it keeps wishing existed, come on the radio. I'd love to hear about it."/>
 
 Email me at **Suyashjadhav710@gmail.com**, or find me on [LinkedIn](https://www.linkedin.com/in/suyash-jadhav-bioinformatician/), [ORCID](https://orcid.org/0009-0000-1043-7044) and [X](https://x.com/SuyashJ0710).
 
-<img src="assets/footer.svg" width="100%" alt="Chequered flag: thanks for reading"/>
+<img src="assets/footer.svg" width="100%" alt="Chequered flag: Thanks for reading"/>

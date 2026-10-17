@@ -4,13 +4,29 @@
     python scripts/next_race.py --out assets/next-race.svg
 """
 import argparse
+import base64
 import datetime as dt
 import json
+import os
 import urllib.request
 from html import escape
 
 API = "https://api.jolpi.ca/ergast/f1/current/next.json"
 RED = "#e10600"
+
+
+FONT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
+
+
+def font_css():
+    """Titillium Web as inline @font-face rules, so the font loads inside an <img> SVG."""
+    rules = []
+    for weight, name in ((400, "Regular"), (600, "SemiBold"), (700, "Bold")):
+        with open(os.path.join(FONT_DIR, f"TitilliumWeb-{name}.woff2"), "rb") as f:
+            data = base64.b64encode(f.read()).decode()
+        rules.append(f'@font-face{{font-family:"Titillium Web";font-weight:{weight};'
+                     f'src:url(data:font/woff2;base64,{data}) format("woff2")}}')
+    return "".join(rules)
 
 
 def fetch():
@@ -26,8 +42,8 @@ def when(session):
 
 def render(race, today):
     W, H = 1000, 130
-    font = '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif'
-    mono = 'ui-monospace,SFMono-Regular,Menlo,Consolas,monospace'
+    font = '"Titillium Web",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif'
+    mono = font
     if race is None:
         title, place, count, sessions = "Season complete", "See you next year", "OFF-SEASON", ""
         label = "Off-season: no race scheduled"
@@ -50,7 +66,8 @@ def render(race, today):
 <defs><clipPath id="c"><rect width="{W}" height="{H}" rx="14"/></clipPath>
 <pattern id="cf" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="4" height="8" fill="#fff" fill-opacity=".025"/></pattern></defs>
 <style>
-text{{font-family:{font}}} .m{{font-family:{mono};font-size:11px;letter-spacing:1.2px;fill:#8b8b96}}
+{font_css()}
+text{{font-family:{font}}} .m{{font-family:{mono};font-size:11px;font-weight:600;letter-spacing:1.4px;fill:#8b8b96}}
 .t{{font-size:24px;font-weight:700;fill:#f5f5f7}} .p{{font-size:13px;fill:#b9b9c3}} .d{{font-size:15px;font-weight:600;fill:#f5f5f7}}
 .k{{font-family:{mono};font-size:12px;letter-spacing:1.4px;fill:#fff;font-weight:700}}
 .dot{{animation:bl 1s ease-in-out infinite alternate}}@keyframes bl{{to{{opacity:.2}}}}

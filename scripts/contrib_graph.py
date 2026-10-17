@@ -8,6 +8,7 @@ or GITHUB_TOKEN), or reads them from a JSON file mapping dates to counts.
     python scripts/contrib_graph.py --from-json days.json --out assets/contrib.svg
 """
 import argparse
+import base64
 import datetime as dt
 import json
 import os
@@ -44,6 +45,20 @@ CAR = (
     'translate(186 50)"><g class="spin"><circle r="13" fill="#111"/><circle r="6.5" fill="#9aa0a6"/><'
     'path d="M-6.5 0H6.5M0-6.5V6.5" stroke="#111" stroke-width="2.2"/></g></g>'
 )
+
+
+FONT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
+
+
+def font_css():
+    """Titillium Web as inline @font-face rules, so the font loads inside an <img> SVG."""
+    rules = []
+    for weight, name in ((400, "Regular"), (600, "SemiBold"), (700, "Bold")):
+        with open(os.path.join(FONT_DIR, f"TitilliumWeb-{name}.woff2"), "rb") as f:
+            data = base64.b64encode(f.read()).decode()
+        rules.append(f'@font-face{{font-family:"Titillium Web";font-weight:{weight};'
+                     f'src:url(data:font/woff2;base64,{data}) format("woff2")}}')
+    return "".join(rules)
 
 
 def fetch(login, token):
@@ -122,7 +137,7 @@ def render(days):
     legend_x = width - 56 - 5 * PITCH
     legend = "".join(f'<rect class="l{i} lg" x="{legend_x + i * PITCH}" y="{height - 30}" width="{CELL}" '
                      f'height="{CELL}" rx="3"/>' for i in range(5))
-    stats = f"{active} active days  ·  longest streak {longest} days  ·  current streak {current} days"
+    stats = f"{active} active days  ·  Longest streak {longest} days  ·  Current streak {current} days"
 
     # Fastest lap: the busiest day, outlined in purple with a tag above the grid.
     fastest = ""
@@ -142,7 +157,8 @@ def render(days):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-labelledby="t">
 <title id="t">{total:,} contributions in the last year. {stats}.</title>
 <style>
-text{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;fill:#59636e}}
+{font_css()}
+text{{font-family:"Titillium Web",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;fill:#59636e}}
 .h{{font-size:22px;font-weight:700;fill:#1f2328}} .s{{font-size:13px}} .m{{font-size:11px}}
 .l0{{fill:#ebedf0}} .l1{{fill:#9be9a8}} .l2{{fill:#40c463}} .l3{{fill:#30a14e}} .l4{{fill:#216e39}}
 .cell{{transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}}
@@ -152,7 +168,7 @@ text{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sa
 .fl{{fill:none;stroke:#a855f7;stroke-width:2.5;animation:flp 1.6s ease-in-out infinite alternate}}
 .fll{{stroke:#a855f7;stroke-width:1.5;stroke-dasharray:2 3}}
 .flt{{font-size:10.5px;font-weight:700;fill:#fff;letter-spacing:.6px}}
-.fbt{{font-size:11px;font-weight:800;fill:#111;letter-spacing:1.2px}}
+.fbt{{font-size:11px;font-weight:700;fill:#111;letter-spacing:1.2px}}
 .fb{{animation:fbp 2s ease-in-out infinite alternate}}
 @keyframes flp{{from{{stroke-opacity:1}}to{{stroke-opacity:.25}}}}
 @keyframes fbp{{from{{opacity:1}}to{{opacity:.75}}}}
