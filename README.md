@@ -8,7 +8,7 @@ Hi, I'm Suyash. I'm a bioinformatician and a Ph.D. scholar in the DDOmics Lab at
 
 I started out with a B.Sc. in Biotechnology in Nashik, then did my M.Sc. at the Bioinformatics Centre, Savitribai Phule Pune University, which is where I moved fully into bioinformatics. I joined NCCS in August 2026 on a CSIR-UGC NET fellowship.
 
-When I'm away from the screen, I'm usually watching Formula 1, which is where the start lights up there come from. Senna once said you go for the limit, reach it, and then find you can go a little bit further. It's my favourite quote.
+When I'm away from the screen, I'm usually watching Formula 1, which is where the start lights up there come from. 
 
 <br clear="right"/>
 
