@@ -4,7 +4,7 @@
 
 <br/>
 
-<img src="assets/driver.svg?v=517e3513" width="100%" alt="Driver card: JAD, number 07, Suyash Jadhav, India. DDOmics Lab, NCCS Pune. Bioinformatician and Ph.D. scholar."/>
+<img src="assets/driver.svg?v=706ecee3" width="100%" alt="Driver card: SJ07, Suyash Jadhav. DDOmics Lab, NCCS Pune. Bioinformatician and Ph.D. scholar."/>
 
 Hi, I'm Suyash. I'm a bioinformatician and a Ph.D. scholar in the DDOmics Lab at the National Centre for Cell Science, Pune, where I build computational tools to read and make sense of microbiome sequencing data.
 
