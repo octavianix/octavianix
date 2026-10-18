@@ -14,8 +14,6 @@ When I'm away from the screen, I'm usually watching Formula 1, which is where th
 
 <img src="assets/pitstop.svg?v=64f69f10" width="100%" alt="Pit stop, 2024: switched from Biotechnology (B.Sc.) to Bioinformatics (M.Sc. onwards)."/>
 
-<img src="assets/circuit.svg?v=6a9d3516" width="100%" alt="One lap so far: a live-timing-style circuit. A car laps the track, braking for corners, while mini-sectors light up, a speed and throttle/brake trace follows it, and a timing tower highlights five milestones: 2021 B.Sc. Biotechnology, Nashik; 2024 GATE-B, AIR 31; 2024 M.Sc. Bioinformatics, SPPU; 2025 CSIR-NET JRF, AIR 105; 2026 Ph.D., DDOmics Lab, NCCS."/>
-
 <br/>
 
 <img src="assets/titles/worked.svg?v=e744ec90" height="62" alt="Sector 1: Things I've worked on"/>
