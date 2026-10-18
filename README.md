@@ -40,11 +40,9 @@ I built the DDOmics Lab website so that nobody would need me to keep it updated.
 
 <img src="assets/titles/lately.svg?v=bc65bcf8" height="62" alt="Sector 2: Lately"/>
 
-Most of what I'm working on right now is still unpublished and lives in private repos, so this graph is the only bit of it you can see for now. It redraws itself every day, the car does a lap underneath it, and my busiest day gets the purple fastest-lap tag.
+Most of what I'm working on right now is still unpublished and lives in private repos, so this graph is the only bit of it you can see for now. The car does a lap underneath it, and my busiest day gets the purple fastest-lap tag.
 
-<img src="assets/contrib.svg" width="100%" alt="Animated contribution graph for the last year, with the busiest day marked as the fastest lap"/>
-
-<img src="assets/next-race.svg" width="100%" alt="Next Formula 1 race, updated daily"/>
+<img src="assets/contrib.svg" width="100%" alt="Animated contribution graph up to 17 October 2026, with the busiest day marked as the fastest lap"/>
 
 <img src="assets/weekend.svg?v=6a11c1ca" width="100%" alt="Free practice: new methods in testing, long runs on current projects, setup work with details after qualifying. Season goals: results I would defend in parc fermé, publish when it is ready and not before, leave tools the next person can use."/>
 
